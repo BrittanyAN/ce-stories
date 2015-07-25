@@ -28,13 +28,29 @@
     <div id="right">
         <div id="menubar">
             <div id="button">
-                Menu
+            	<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
             </div>
         </div>
 
   <%= yield %>
 
-
+  </div>
+  
+  <script>
+    $('#button').toggle( 
+    function() {
+        $('#right').animate({ left: 250 }, 'slow', function() {
+            $('#button').html('<span class="glyphicon gglyphicon glyphicon-remove" aria-hidden="true"></span>');
+        });
+    }, 
+    function() {
+        $('#right').animate({ left: 0 }, 'slow', function() {
+            $('#button').html('<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>');
+        });
+    }
+);
+  </script>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     
 </body>
