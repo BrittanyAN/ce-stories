@@ -4,19 +4,26 @@
 
 // For Home page
 .main {
-	background: gray;
+	background: transparent url("http://img00.deviantart.net/0448/i/2014/138/b/9/little_stonehenge_by_capricornus60-d7iswol.jpg") no-repeat scroll center center / cover;
+	// Image source: http://capricornus60.deviantart.com/art/little-stonehenge-454845045
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
 .main h1 {
 	font-weight: bold;
+	font-size: 72px;
+	text-shadow: 2px 2px white;
 }
 .key-note {
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
+.key-note h2 {
+	font-weight: bold;
+}
 .splash-img {
-	background: gray;
+	background:transparent url("http://img05.deviantart.net/74b5/i/2013/167/c/8/old_forest_home_by_burtn-d699dw3.jpg") no-repeat scroll center center / cover;
+	// Image source: http://burtn.deviantart.com/art/Old-Forest-Home-378351507
   	height: 400px;
 }
 
