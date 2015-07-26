@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stories</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <title>Stories</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 </head>
 <body>
-  
-  <div id="menu">
+
+<div id="menu">
         <ul>
             <li><a href="#">Menu Item 1</a></li>
             <li><a href="#">Menu Item 2</a></li>
@@ -20,38 +20,38 @@
             <li><a href="#">Menu Item 7</a></li>
             <li><a href="#">Menu Item 8</a></li>
             <li><a href="#">Menu Item 9</a></li>
-            <li><a href="#">Menu Item 10</a></li>
-            <li><a href="#">Menu Item 11</a></li>
-            <li><a href="#">Menu Item 12</a></li>
         </ul>
     </div>
     <div id="right">
         <div id="menubar">
             <div id="button">
-            	<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                Menu
             </div>
         </div>
 
-  <%= yield %>
+        <%= yield %>
 
-  </div>
+    </div>
   
-  <script>
-    $('#button').toggle( 
-    function() {
-        $('#right').animate({ left: 250 }, 'slow', function() {
-            $('#button').html('<span class="glyphicon gglyphicon glyphicon-remove" aria-hidden="true"></span>');
-        });
-    }, 
-    function() {
-        $('#right').animate({ left: 0 }, 'slow', function() {
-            $('#button').html('<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>');
-        });
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    
+    <script>
+    $(document).ready(function() {
+        $('#button').toggle( 
+            function() {
+                $('#right').animate({ left: 250 }, 'slow', function() {
+                    $('#button').html('Close');
+                });
+            }, 
+            function() {
+                $('#right').animate({ left: 0 }, 'slow', function() {
+                    $('#button').html('Menu');
+                });
+            }
+        );
     }
-);
-  </script>
-  
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    </script>
     
 </body>
 </html>

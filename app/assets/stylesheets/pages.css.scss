@@ -1,15 +1,26 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// For Home page
 body {
 	font-family: 'Roboto', sans-serif;
 }
 .main {
 	background: gray;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.main h1 {
+	font-weight: bold;
+}
+.key-note {
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 .splash-img {
 	background: gray;
-  height: 500px;
+  	height: 400px;
 }
 
 .footer {
