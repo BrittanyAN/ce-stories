@@ -1,40 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+/*Menu Bar*/
+
+#menubtn {
+    float: left;
+    display: inline-block;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: -1;
+}
+
+#closebtn {
+    float: right;
+    display: inline-block;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+}
+
 #menubar {
-    width:100%;
-    background-color:#444;
-    color: #fff;
-    padding: 10px;
+    float: left;
+    position: fixed;
+    background-color: #444;
+    width: 250px;
 }
 
-#button {
-    cursor:pointer;
+#menubar li {
+    background-color: #444;
+    border-bottom: 1px solid #888;
+    list-style-type: none;
 }
 
-#menu li a {
+#menubar li a {
     padding: 10px;
     display: block;
     color: white;
     text-decoration: none;
-}
-
-#right {
-    width:100%;
-    background-color: #fff;
-    z-index: 5;
-    position: absolute;
-    left: 0px;
-    height: 100%;
-}
-
-#right p {
-    padding: 10px;
-}
-
-#menu {
-    float:left;
-    width: 250px;
-}
-
-#menu li {
-    background-color:#444;
-    border-bottom: 1px solid #888;
 }
