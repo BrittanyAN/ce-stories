@@ -65,6 +65,7 @@ body {
 #menubar li {
     background-color: #444;
     border-bottom: 1px solid #888;
+    margin-right: 10px;
     list-style-type: none;
 }
 
