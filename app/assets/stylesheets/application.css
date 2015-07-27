@@ -75,3 +75,8 @@ body {
     color: white;
     text-decoration: none;
 }
+
+/*Footer*/
+.footer {
+	font-size: 10px;
+}
