@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :signups
   post 'signups' => 'signups#create'
+  get '/thanks' => 'pages#thanks'
   get '/about' => 'pages#about'
   root 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.

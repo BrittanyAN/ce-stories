@@ -5,8 +5,8 @@ class SignupsController < ApplicationController
     
     def create
         @signup = Signup.new(signup_params)
-        if @message.save
-            redirect_to '/signups'
+        if @signup.save
+            redirect_to '/thanks'
         else
             render 'new'
         end
